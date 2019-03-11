@@ -10,10 +10,17 @@
     </parent>
     <groupId>com.liuxun.dubbo</groupId>
     <artifactId>dubbo-study</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1-SNAPSHOT</version>
+
     <name>dubbo-study</name>
     <description>dubbo框架学习</description>
 
+
+    <modules>
+        <module>consumer</module>
+        <module>provider</module>
+        <module>service</module>
+    </modules>
     <properties>
         <java.version>1.8</java.version>
     </properties>
