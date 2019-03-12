@@ -1,6 +1,5 @@
 package com.dubbo.service;
 
-public interface TestService {
-
+public interface TestSerivce {
     String hello(String str);
 }
