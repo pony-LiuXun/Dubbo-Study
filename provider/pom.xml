@@ -5,7 +5,7 @@
 
     <groupId>com.dubbo</groupId>
     <artifactId>provider</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1-SNAPSHOT</version>
     <name>provider</name>
     <description>提供者</description>
 
@@ -41,6 +41,17 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.dubbo.provider.ProviderApplication</mainClass>
+                    <outputDirectory>${outJarDirectory}</outputDirectory>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>

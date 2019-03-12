@@ -6,11 +6,12 @@
        http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
        http://dubbo.apache.org/schema/dubbo
        http://dubbo.apache.org/schema/dubbo/dubbo.xsd
-       http://dubbo.apache.org/schema/dubbo">
+       http://dubbo.apache.org/schema/dubbo
+http://dubbo.apache.org/schema/dubbo ">
     <!-- 消费方应用名，用于计算依赖关系，不是匹配条件，不要与提供方一样 -->
     <dubbo:application name="consumer"/>
     <!-- 使用zookeeper广播注册中心暴露发现服务地址 -->
-    <dubbo:registry id = "register" address="123123123"/>
+    <dubbo:registry id="register" address="zookeeper://192.168.10.18:2181"/>
     <!--订阅服务 -->
-    <dubbo:reference interface="com.dubbo.service.TestService" id="testService"/>
+    <dubbo:reference interface="com.dubbo.service.TestSerivce" id="testService"/>
 </beans>

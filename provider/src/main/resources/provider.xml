@@ -3,16 +3,16 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-       http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
-       http://dubbo.apache.org/schema/dubbo
+       http://www.springframework.org/schema/beans/spring-beans-4.3.xsd http://dubbo.apache.org/schema/dubbo
        http://dubbo.apache.org/schema/dubbo/dubbo.xsd
-       http://dubbo.apache.org/schema/dubbo">
+       http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo ">
     <!--服务提供方信息 -->
     <dubbo:application name="provider"/>
     <!--使用zookeeper作为服务注册中心 -->
-    <dubbo:registry id="register" address="123123123"/>
+    <dubbo:registry id="register" address="zookeeper://192.168.10.18:2181"/>
     <!--服务暴露端口 -->
     <dubbo:protocol name="" port=""/>
     <!--注册服务并制定注册中心 -->
-    <dubbo:service interface="com.dubbo.service.TestService" registry="register" ref="testService"/>
+    <dubbo:service interface="com.dubbo.service.TestSerivce" registry="register" ref="testService"/>
+
 </beans>
