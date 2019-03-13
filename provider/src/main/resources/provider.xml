@@ -12,5 +12,6 @@
     <dubbo:protocol name="" port=""/>
     <!--注册服务并制定注册中心 -->
     <dubbo:service interface="com.dubbo.service.TestSerivce" registry="register" ref="testService"/>
+    <dubbo:service interface="com.dubbo.service.CheckService" registry="register" ref="checkService"/>
 
 </beans>

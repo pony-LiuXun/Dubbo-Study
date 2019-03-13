@@ -9,5 +9,10 @@
     <!-- 使用zookeeper广播注册中心暴露发现服务地址 -->
     <dubbo:registry id="register" address="zookeeper://192.168.0.167:2181"/>
     <!--订阅服务 -->
+
     <dubbo:reference interface="com.dubbo.service.TestSerivce" id="testService"/>
+    <dubbo:reference interface="com.dubbo.service.CheckService" id="checkService"/>
+
+    <!--启动检查(心跳检测) 检测消费方所有订阅的服务-->
+    <dubbo:consumer check="true"/>
 </beans>
