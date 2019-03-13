@@ -12,6 +12,9 @@
     <dubbo:protocol name="" port=""/>
     <!--注册服务并制定注册中心 -->
     <dubbo:service interface="com.dubbo.service.TestSerivce" registry="register" ref="testService"/>
-    <dubbo:service interface="com.dubbo.service.CheckService" registry="register" ref="checkService"/>
+    <dubbo:service interface="com.dubbo.service.CheckService" registry="register" ref="checkService" />
+
+    <!--集群容错机制缺省配置失败(只发起一次调用，失败立即报错) -->
+    <dubbo:provider cluster="failfast"/>
 
 </beans>
